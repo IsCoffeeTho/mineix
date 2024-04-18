@@ -1,14 +1,8 @@
 local directory_endpoint = "https://api.github.com/repos/IsCoffeeTho/mineix/git/trees/"
 local file_endpoint = "https://raw.githubusercontent.com/IsCoffeeTho/mineix/"
 
---#error This installer is written for CraftOS, please run `sudo minepkg update`
-
 function table.contains(table, element)
-	for _, value in pairs(table) do
-		if value == element then
-			return true
-		end
-	end
+	for _, value in pairs(table) do if value == element then return true end end
 	return false
 end
 
@@ -49,4 +43,4 @@ if string.len(dl_latest_resp) > 0 and string.sub(dl_latest_resp, 1, 1) == 'n' th
 		end
 	end
 end
-print("Attempting to install '" .. branch .. "'")
+print("Installing '" .. branch .. "' branch")
